@@ -1,0 +1,28 @@
+@media screen and (max-width: 925px) {
+  header {
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 10px;
+  }
+
+  .logo-header img {
+    width: 40px;
+  }
+  .logo-header span {
+    display: none;
+  }
+
+  .cart-header {
+    justify-self: end;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-header {
+    width: 90%;
+  }
+
+  .search-header input {
+    width: 100%;
+  }
+}

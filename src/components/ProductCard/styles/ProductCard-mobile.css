@@ -1,0 +1,35 @@
+@media screen and (max-width: 925px) {  
+  .home .product-card {
+    padding: 10px;
+    width: 90%;
+    align-items: center;
+  }
+
+  .home .product-infos {
+    padding: 10px;
+ }
+
+  .home .product-infos h3 {
+    font-size: 1em;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .home .product-card img {
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+  }
+
+  .home .product-card .product-price {
+    color: #f07720;
+    font-size: 0.8em;
+  }
+
+  .home .product-card .free-shipping {
+    font-size: 0.6em;
+  }
+}

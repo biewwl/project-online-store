@@ -1,0 +1,48 @@
+.cart {
+  padding-bottom: 60px;
+}
+
+.cart h1 {
+  color: #f07720;
+  font-weight: 300;
+  padding: 40px;
+}
+
+.cart-items {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: white;
+  border-top: 2px solid #f07720;
+  bottom: 0;
+  height: 60px;
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+footer span {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+footer span:first-child {
+  font-weight: 900;
+  font-size: 1.1em;
+  margin-right: 5px;
+}
+
+footer button {
+  padding: 10px 20px;
+  background-color: #f07720;
+  border: none;
+  font-weight: 900;
+  color: white;
+  cursor: pointer;
+}

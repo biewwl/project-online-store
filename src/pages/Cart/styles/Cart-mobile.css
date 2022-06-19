@@ -1,0 +1,16 @@
+@media screen and (max-width: 925px) {
+  .cart h1 {
+    font-size: 1.5em;
+  }
+
+  footer span {
+    font-size: 0.8em;
+    font-weight: 300;
+  }
+
+  footer span:first-child {
+    font-weight: 900;
+    font-size: 1em;
+    margin-right: 5px;
+  }
+}

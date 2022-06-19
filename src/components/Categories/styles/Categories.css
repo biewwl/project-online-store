@@ -1,0 +1,36 @@
+.categories {
+  padding: 40px 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.categories ul {
+  list-style: none;
+}
+
+.categories li {
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.category {
+  color: rgb(41, 41, 41);
+  font-weight: 100;
+}
+
+.category-selected {
+  color: #f07720;
+  font-weight: 500;
+}
+
+.remove-category {
+  background:none;
+  border: none;
+  color: rgb(255, 46, 46);
+  cursor: pointer;
+  margin: 0 5px;
+  font-size: 1.2em;
+}

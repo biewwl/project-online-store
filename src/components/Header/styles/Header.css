@@ -1,0 +1,95 @@
+header {
+  align-items: center;
+  background-color: #f07720;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-header span{
+  color: white;
+  font-size: 1.3em;
+  padding: 0 10px;
+}
+
+.logo-header img {
+  width: 50px;
+}
+
+.search-header {
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.search-header input {
+  border-radius: 25px;
+  border: none;
+  height: 25px;
+  padding: 0 5px;
+}
+
+.search-header input:focus {
+  border: none;
+  outline: none;
+}
+
+.send-query {
+  background: rgb(245, 245, 245);
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.clear-query {
+  align-items: center;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.2em;
+  position: absolute;
+  right: -12px;
+}
+
+.cart-header {
+  justify-self: end;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.cart-header svg {
+  color: white;
+  font-size: 1.6em;
+}
+
+.cart-amount {
+  background-color: red;
+  width: 17px;
+  height: 17px;
+  border-radius: 25px;
+  color: white;
+  font-size: 0.6em;
+  font-weight: 900;
+  transform: translateY(-10px) translateX(-5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

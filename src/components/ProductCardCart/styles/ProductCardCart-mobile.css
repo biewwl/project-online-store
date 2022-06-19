@@ -1,0 +1,36 @@
+@media screen and (max-width: 925px) {
+  .cart .product-card {
+    padding: 10px;
+    width: 90%;
+    align-items: center;
+  }
+
+  .cart .product-infos {
+    padding: 10px;
+    width: 100%;
+ }
+
+  .cart .product-infos h3 {
+    font-size: 1em;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .cart .product-card img {
+    height: 50px;
+    object-fit: cover;
+    width: 50px;
+  }
+
+  .cart .product-card .product-price {
+    color: #f07720;
+    font-size: 0.8em;
+  }
+
+  .cart .product-card .free-shipping {
+    font-size: 0.6em;
+  }
+}
