@@ -154,6 +154,16 @@ function Product({ dispatch, cart }) {
                     value={amount}
                     onChange={defineAmount}
                     onKeyDown={onlyNumber}
+                    className="input-amount"
+                  />
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amount"
+                    value={String(amount)}
+                    onChange={defineAmount}
+                    onKeyDown={onlyNumber}
+                    className="input-amount-mobile"
                   />
                   <button
                     disabled={amount === available_quantity}

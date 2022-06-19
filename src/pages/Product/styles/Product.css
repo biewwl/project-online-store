@@ -91,7 +91,7 @@
 }
 
 .add-to-cart button:nth-child(1),
-.add-to-cart button:nth-child(3) {
+.add-to-cart button:nth-child(4) {
   font-size: 1.3em;
   height: 30px;
   width: 30px;
@@ -103,7 +103,7 @@
 
 
 .add-to-cart button:nth-child(1):disabled,
-.add-to-cart button:nth-child(3):disabled {
+.add-to-cart button:nth-child(4):disabled {
   color: #d7d7d7;
   cursor: not-allowed;
 }
@@ -114,6 +114,10 @@
   text-align: center;
   outline: none;
   border: 1px solid rgb(230, 230, 230);
+}
+
+.input-amount-mobile {
+  display: none;
 }
 
 .add-to-cart-button {

@@ -43,6 +43,14 @@
   .add-to-cart {
     justify-content: space-evenly;
   }
+  
+  .input-amount-mobile {
+    display: block;
+  }
+
+  .input-amount {
+    display: none;
+  }
 
   .product-attributes li span:first-child {
     font-size: 0.8em;
