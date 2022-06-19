@@ -12,15 +12,21 @@ function Header({ dispatch, search: { category, query } }) {
   const navigate = useNavigate();
 
   const [categories, setCategories] = useState([]);
+  const [openCategories, setOpenCategories] = useState(false);
 
   const clickCategory = (category) => {
     dispatch(getProducts({ category, query }));
+    setOpenCategories(false);
     navigate("/");
   };
 
   const removeCategory = () => {
     dispatch(getProducts({ category: { name: "", id: "" }, query }));
     navigate("/");
+  };
+
+  const openCloseCategories = () => {
+    setOpenCategories(!openCategories);
   };
 
   useEffect(() => {
@@ -34,27 +40,53 @@ function Header({ dispatch, search: { category, query } }) {
   return (
     <aside className="categories">
       {categories.length !== 0 && (
-        <ul>
-          {categories.map((e) => (
-            <li
-              key={e.id}
-              className={
-                e.id === category.id ? "category-selected" : "category"
-              }
-            >
-              <span onClick={() => clickCategory(e)}>{e.name}</span>
-              {e.id === category.id ? (
-                <Icon
-                  className="remove-category"
-                  onClick={removeCategory}
-                  icon="akar-icons:circle-x-fill"
-                />
-              ) : (
-                ""
-              )}
-            </li>
-          ))}
-        </ul>
+        <>
+          <ul className="categories-desktop">
+            {categories.map((e) => (
+              <li
+                key={e.id}
+                className={
+                  e.id === category.id ? "category-selected" : "category"
+                }
+              >
+                <span onClick={() => clickCategory(e)}>{e.name}</span>
+                {e.id === category.id ? (
+                  <Icon
+                    className="remove-category"
+                    onClick={removeCategory}
+                    icon="akar-icons:circle-x-fill"
+                  />
+                ) : (
+                  ""
+                )}
+              </li>
+            ))}
+          </ul>
+          <Icon className="openCloseCategories" icon="carbon:expand-categories" onClick={openCloseCategories} />
+          {openCategories && (
+            <ul className="categories-mobile">
+              {categories.map((e) => (
+                <li
+                  key={e.id}
+                  className={
+                    e.id === category.id ? "category-selected" : "category"
+                  }
+                >
+                  <span onClick={() => clickCategory(e)}>{e.name}</span>
+                  {e.id === category.id ? (
+                    <Icon
+                      className="remove-category"
+                      onClick={removeCategory}
+                      icon="akar-icons:circle-x-fill"
+                    />
+                  ) : (
+                    ""
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </>
       )}
     </aside>
   );

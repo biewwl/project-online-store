@@ -4,7 +4,15 @@
   z-index: 1;
 }
 
-.categories ul {
+.openCloseCategories {
+  display: none;
+}
+
+.categories-mobile {
+  display: none;
+}
+
+.categories-mobile, .categories-desktop {
   list-style: none;
 }
 
