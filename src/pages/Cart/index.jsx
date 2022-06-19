@@ -20,13 +20,15 @@ function Cart({ cart }) {
           ))}
         </section>
       </main>
-      <footer>
-        <section className="subtotal">
-          <span>Subtotal:</span>
-          <span>{priceFormat(getSubtotal())}</span>
-        </section>
-        <button>Pay</button>
-      </footer>
+      {cart.length !== 0 && (
+        <footer>
+          <section className="subtotal">
+            <span>Subtotal:</span>
+            <span>{priceFormat(getSubtotal())}</span>
+          </section>
+          <button>Pay</button>
+        </footer>
+      )}
     </>
   );
 }
