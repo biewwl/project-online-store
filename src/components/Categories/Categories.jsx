@@ -54,7 +54,7 @@ function Header({ dispatch, search: { category, query } }) {
                   <Icon
                     className="remove-category"
                     onClick={removeCategory}
-                    icon="akar-icons:circle-x-fill"
+                    icon="bi:x"
                   />
                 ) : (
                   ""

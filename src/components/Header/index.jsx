@@ -31,7 +31,7 @@ function Header({ dispatch, search: { category, query: globalQuery }, cart }) {
     <header>
       <Link to="/" className="logo-header">
         <img src={logo} alt="logo" />
-        <span>Storee</span>
+        <span>Online Store</span>
       </Link>
       <section className="search-header">
         <label htmlFor="query">

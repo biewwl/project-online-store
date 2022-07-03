@@ -1,0 +1,7 @@
+.loading {
+  display: flex;
+  padding: 30% 0;
+  justify-content: center;
+  font-size: 5em;
+  color: rgb(78, 18, 115);
+}

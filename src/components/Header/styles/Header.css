@@ -1,6 +1,6 @@
 header {
   align-items: center;
-  background-color: #f07720;
+  background: linear-gradient(to right, rgb(212, 58, 58), rgb(78, 18, 115));
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 10px 20px;
@@ -16,7 +16,7 @@ header {
   text-decoration: none;
 }
 
-.logo-header span{
+.logo-header span {
   color: white;
   font-size: 1.3em;
   padding: 0 10px;
@@ -40,7 +40,12 @@ header {
   border-radius: 25px;
   border: none;
   height: 25px;
-  padding: 0 5px;
+  padding: 0 20px;
+}
+
+.search-header input::placeholder {
+  color: #bdbdbd;
+  font-weight: 100;
 }
 
 .search-header input:focus {
@@ -49,11 +54,15 @@ header {
 }
 
 .send-query {
-  background: rgb(245, 245, 245);
+  background: none;
   border-radius: 25px;
   border: 0;
   cursor: pointer;
-  padding: 5px;
+  padding: 0 10px;
+  color: rgb(78, 18, 115);
+  font-size: 1em;
+  display: flex;
+  align-items: center;
 }
 
 .clear-query {

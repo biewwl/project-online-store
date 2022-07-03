@@ -21,7 +21,7 @@
 }
 
 .cart .product-infos {
-  color: black;
+  color: #444;
   display: grid;
   padding: 0 30px;
   text-decoration: none;
@@ -40,7 +40,7 @@
 
 .cart .product-card .product-price {
   font-size: 1em;
-  color: #f07720;
+  color: rgb(78, 18, 115);
 }
 
 .cart .product-card .free-shipping {

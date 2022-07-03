@@ -1,4 +1,4 @@
-import lS from "../../helpers/localStorage";
+import lS from "manager-local-storage";
 
 const cartLS = lS("g", "biewwl-shopping-cart-cart");
 

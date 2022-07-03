@@ -3,6 +3,15 @@
     font-size: 1.5em;
   }
 
+  footer {
+    opacity: 1;
+    padding: 20px;
+    width: 90vw;
+    margin: 5vw;
+    right: auto;
+    bottom: 5px;
+  }
+
   footer span {
     font-size: 0.8em;
     font-weight: 300;
