@@ -9,7 +9,7 @@ const getIndexInTheCart = (id) => {
 
 export const addToCart = (item) => {
   const itemInTheCart = getIndexInTheCart(item.id);
-  const currentCart = lS("g", NAME_KEY_LOCAL_STORAGE);
+  const currentCart = lS("g", NAME_KEY_LOCAL_STORAGE) ?? [];
   if (item.amount === 0) {
     return removeFromTheCart(item.id);
   }
