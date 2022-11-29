@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/project-online-store/static/css/main.0653a831.css",
-    "main.js": "/project-online-store/static/js/main.a16e6093.js",
+    "main.css": "/project-online-store/static/css/main.6e97fbb8.css",
+    "main.js": "/project-online-store/static/js/main.d990e3ce.js",
     "static/js/787.a92fe09e.chunk.js": "/project-online-store/static/js/787.a92fe09e.chunk.js",
-    "static/media/logo.png": "/project-online-store/static/media/logo.e104aeee2f4b24ba3f48.png",
+    "static/media/Product Sans Regular.ttf": "/project-online-store/static/media/Product Sans Regular.d165384076551a756b3c.ttf",
     "index.html": "/project-online-store/index.html",
-    "main.0653a831.css.map": "/project-online-store/static/css/main.0653a831.css.map",
-    "main.a16e6093.js.map": "/project-online-store/static/js/main.a16e6093.js.map",
+    "main.6e97fbb8.css.map": "/project-online-store/static/css/main.6e97fbb8.css.map",
+    "main.d990e3ce.js.map": "/project-online-store/static/js/main.d990e3ce.js.map",
     "787.a92fe09e.chunk.js.map": "/project-online-store/static/js/787.a92fe09e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0653a831.css",
-    "static/js/main.a16e6093.js"
+    "static/css/main.6e97fbb8.css",
+    "static/js/main.d990e3ce.js"
   ]
 }
