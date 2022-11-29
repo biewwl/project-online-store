@@ -1,20 +1,36 @@
 @media screen and (max-width: 925px) {
   .categories {
-    padding: 20px 30px;
+    padding: 0;
+    padding-top: 120px;
+    position: static;
+    width: 100%;
+    border-right: none;
+    overflow: visible;
+    height: auto;
   }
-
+  
   .categories-desktop {
     display: none;
   }
-
+  
   .openCloseCategories {
+    padding: 10px;
     display: block;
-    margin: 20px 0;
-    color: rgb(78, 18, 115);
+    /* margin: 20px 0; */
+    background-color: var(--primary-color);
+    position: fixed;
+    top: 90px;
+    font-size: 0.8em;
+    text-align: center;
+    width: 100%;
+    color: var(--blue);
   }
 
   .categories-mobile {
     display: flex;
     flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    /* background-color: #fff; */
   }
 }

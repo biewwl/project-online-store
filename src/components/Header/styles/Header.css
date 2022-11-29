@@ -1,13 +1,57 @@
 header {
-  align-items: center;
-  background: linear-gradient(to right, rgb(212, 58, 58), rgb(78, 18, 115));
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 10px 20px;
-  position: sticky;
+  height: 90px;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100vw;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 274px 1fr ;
+  background-color: #fff;
+}
+
+.header-left-content {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 274px;
+  /* height: 90px; */
+  border-bottom: 5px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.header-left-content a {
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-family: product-sans, sans-serif;
+  color: #444;
+  font-size: 1.3em;
+}
+
+.header-left-content .detail-logo {
+  content: '';
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  background-color: var(--red);
+  left: 80px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.header-right-content {
+  align-items: center;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 274px;
+  padding: 0 40px 0 5px;
+  border-bottom: 5px solid var(--primary-color);
 }
 
 .logo-header {
@@ -17,9 +61,9 @@ header {
 }
 
 .logo-header span {
-  color: white;
   font-size: 1.3em;
   padding: 0 10px;
+  color: #444;
 }
 
 .logo-header img {
@@ -28,19 +72,28 @@ header {
 
 .search-header {
   align-items: center;
-  background-color: white;
-  border-radius: 25px;
+  background-color: var(--primary-color);
+  border-radius: 0.5em;
   display: flex;
   justify-self: center;
   position: relative;
   justify-content: space-between;
+  height: 40px;
 }
 
 .search-header input {
-  border-radius: 25px;
+  border-radius: 0.5em;
   border: none;
-  height: 25px;
+  height: 100%;
   padding: 0 20px;
+  background: none;
+}
+
+.search-header input:-webkit-autofill,
+.search-header input:-webkit-autofill:hover, 
+.search-header input:-webkit-autofill:focus, 
+.search-header input:-webkit-autofill:active{
+    box-shadow: 0 0 0 30px var(--primary-color) inset !important;
 }
 
 .search-header input::placeholder {
@@ -59,7 +112,7 @@ header {
   border: 0;
   cursor: pointer;
   padding: 0 10px;
-  color: rgb(78, 18, 115);
+  color: var(--blue);
   font-size: 1em;
   display: flex;
   align-items: center;
@@ -69,7 +122,7 @@ header {
   align-items: center;
   background: none;
   border: none;
-  color: white;
+  color: var(--red);
   cursor: pointer;
   display: flex;
   font-size: 1.2em;
@@ -82,15 +135,15 @@ header {
   text-decoration: none;
   display: flex;
   align-items: center;
+  color: #444;
 }
 
 .cart-header svg {
-  color: white;
   font-size: 1.6em;
 }
 
 .cart-amount {
-  background-color: red;
+  background-color: var(--red);
   width: 17px;
   height: 17px;
   border-radius: 25px;

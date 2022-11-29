@@ -1,4 +1,5 @@
 import "./App.css";
+import "./colors/colors.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";

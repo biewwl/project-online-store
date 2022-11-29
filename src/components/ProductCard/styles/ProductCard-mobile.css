@@ -1,4 +1,4 @@
-@media screen and (max-width: 925px) {  
+@media screen and (max-width: 925px) {
   .home .product-card {
     padding: 10px;
     width: 90%;
@@ -7,7 +7,7 @@
 
   .home .product-infos {
     padding: 10px;
- }
+  }
 
   .home .product-infos h3 {
     font-size: 1em;

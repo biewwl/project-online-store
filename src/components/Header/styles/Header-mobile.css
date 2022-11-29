@@ -1,7 +1,35 @@
 @media screen and (max-width: 925px) {
   header {
-    grid-template-columns: 1fr 2fr 1fr;
+    display: flex;
+    gap: 10px;
     padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+  }
+
+  header .header-left-content {
+    border-right: none !important;
+    padding-left: 0;
+    padding-bottom: 0 !important;
+    border-bottom: none;
+    width: 20vw;
+    scale: 0.8;
+  }
+
+  .header-left-content .detail-logo {
+    content: "";
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-color: var(--red);
+    left: 40px;
+  }
+
+  .header-right-content {
+    border-bottom: none;
+    display: flex;
+    padding-right: 0;
+    gap: 10px;
+    width: 80%;
   }
 
   .logo-header img {
@@ -16,10 +44,14 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    scale: 0.8;
+    width: 20vw;
   }
 
   .search-header {
     width: 90%;
+    scale: 0.8;
   }
 
   .search-header input {

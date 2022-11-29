@@ -1,7 +1,17 @@
 .categories {
-  padding: 40px 10px;
-  position: relative;
+  padding: 50px 35px 20px;
+  position: fixed;
   z-index: 1;
+  top: 90px;
+  left: 0;
+  height: calc(100% - 90px);
+  overflow-y: scroll;
+  width: 274px;
+  border-right: 5px solid var(--primary-color);
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
 }
 
 .openCloseCategories {
@@ -14,6 +24,9 @@
 
 .categories-mobile, .categories-desktop {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .categories li {
@@ -25,12 +38,12 @@
 }
 
 .category {
-  color: rgb(41, 41, 41);
+  color: #444;
   font-weight: 100;
 }
 
 .category-selected {
-  color: rgb(78, 18, 115);
+  color: var(--blue);
   font-weight: 500;
 }
 

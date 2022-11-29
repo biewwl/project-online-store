@@ -62,7 +62,9 @@ function Header({ dispatch, search: { category, query } }) {
               </li>
             ))}
           </ul>
-          <Icon className="openCloseCategories" icon="carbon:expand-categories" onClick={openCloseCategories} />
+          <div className="openCloseCategories" onClick={openCloseCategories}>
+            Categorias
+          </div>
           {openCategories && (
             <ul className="categories-mobile">
               {categories.map((e) => (
@@ -77,7 +79,7 @@ function Header({ dispatch, search: { category, query } }) {
                     <Icon
                       className="remove-category"
                       onClick={removeCategory}
-                      icon="akar-icons:circle-x-fill"
+                      icon="bi:x"
                     />
                   ) : (
                     ""

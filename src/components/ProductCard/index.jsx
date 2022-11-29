@@ -1,38 +1,42 @@
 import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
 import priceFormat from "../../helpers/priceFormat";
+import { Icon } from "@iconify/react";
+import { connect } from "react-redux";
+import { updateCart } from "../../redux/actions/products";
+import { removeFromTheCart } from "../../helpers/cartManager";
 import "./styles/ProductCard.css";
-import "./styles/ProductCard-mobile.css";
+// import "./styles/ProductCard-mobile.css";
 
-function ProductCard({ product }) {
-  const {
-    id,
-    title,
-    price,
-    thumbnail,
-    available_quantity,
-    shipping: { free_shipping },
-  } = product;
+function ProductCard({ product, isCart = false, dispatch }) {
+  const { id, title, price, thumbnail, amount } = product;
+
+  function removeFromCart() {
+    removeFromTheCart(id);
+    dispatch(updateCart());
+  }
+
   return (
     <section className="product-card">
+      {isCart && (
+        <div className="remove-action">
+          <button className="remove-from-the-cart" onClick={removeFromCart}>
+            <Icon icon="ph:x-bold" />
+          </button>
+        </div>
+      )}
       <img src={thumbnail} alt={title} />
       <Link to={`/product-${id}`} className="product-infos">
         <h3>{title}</h3>
         <span className="product-price">{priceFormat(price)}</span>
-        <span className="product-stock">{`Stock: ${available_quantity}`}</span>
-        <span>
-          {free_shipping ? (
-            <span className="free-shipping">
-              <Icon icon="fa6-solid:truck-fast" />
-              Free Shipping
-            </span>
-          ) : (
-            ""
-          )}
-        </span>
+        {isCart && (
+          <span className="item-quantity">
+            <span>Quantity: </span>
+            {amount}
+          </span>
+        )}
       </Link>
     </section>
   );
 }
 
-export default ProductCard;
+export default connect()(ProductCard);

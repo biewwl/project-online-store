@@ -6,7 +6,7 @@ import './styles/Loading-mobile.css';
 function Loading() {
   return (
     <section className="loading">
-      <Icon icon="eos-icons:three-dots-loading" />
+      <Icon icon="line-md:loading-loop" />
     </section>
   );
 }

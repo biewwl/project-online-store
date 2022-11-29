@@ -1,6 +1,6 @@
 import lS from "manager-local-storage";
 
-const cartLS = lS("g", "biewwl-shopping-cart-cart");
+const cartLS = () => lS("g", "biewwl-shopping-cart-cart");
 
 const initialState = {
   search: {
@@ -8,7 +8,7 @@ const initialState = {
     query: "",
   },
   products: [],
-  cart: cartLS ? cartLS : [],
+  cart: cartLS() ?? [],
 };
 
 const products = (state = initialState, action) => {
@@ -19,29 +19,10 @@ const products = (state = initialState, action) => {
         search: action.payload.search,
         products: action.payload.products,
       };
-    case "ADD_PRODUCT":
-      const newCart = [...state.cart];
-      const existentItem = newCart.find((e) => e.id === action.payload.id);
-      if (existentItem) {
-        existentItem.amount = action.payload.amount;
-        lS("s", "biewwl-shopping-cart-cart", newCart);
-        return { ...state, cart: newCart };
-      } else {
-        lS("s", "biewwl-shopping-cart-cart", [...state.cart, action.payload]);
-        return {
-          ...state,
-          cart: [...state.cart, action.payload],
-        };
-      }
-    case "REMOVE_PRODUCT":
-      lS(
-        "s",
-        "biewwl-shopping-cart-cart",
-        state.cart.filter((e) => e.id !== action.payload)
-      );
+    case "UPDATE_CART":
       return {
         ...state,
-        cart: state.cart.filter((e) => e.id !== action.payload),
+        cart: cartLS(),
       };
     default:
       return state;

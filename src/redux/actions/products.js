@@ -1,6 +1,6 @@
 import { getProductsFromCategoryAndQuery } from "../../services/api";
 
-const getProducts = ({ category: { name, id }, query }) => {
+export const getProducts = ({ category: { name, id }, query }) => {
   return async (dispatch) => {
     dispatch({
       type: "GET_PRODUCTS",
@@ -22,14 +22,7 @@ const getProducts = ({ category: { name, id }, query }) => {
   };
 };
 
-const addProduct = (payload) => ({
-  type: "ADD_PRODUCT",
-  payload,
+export const updateCart = () => ({
+  type: "UPDATE_CART",
 });
 
-const removeProduct = (payload) => ({
-  type: "REMOVE_PRODUCT",
-  payload,
-});
-
-export { getProducts, addProduct, removeProduct };

@@ -1,4 +1,8 @@
 @media screen and (max-width: 925px) {
+  .product {
+    padding-top: 90px;
+  }
+
   .product-info {
     display: flex;
     flex-direction: column;
@@ -37,13 +41,22 @@
   }
 
   .product .product-detail h2 {
-    font-size: 20px;
+    font-size: 15px;
+  }
+
+  .product .product-price {
+    font-size: 15px;
+  }
+
+  .product .product-stock {
+    font-size: 11px;
   }
 
   .add-to-cart {
     justify-content: space-evenly;
+    gap: 0;
   }
-  
+
   .input-amount-mobile {
     display: block;
   }
@@ -52,11 +65,19 @@
     display: none;
   }
 
+  .product-attributes {
+    padding: 20px;
+  }
+
+  .product-attributes h4 {
+    font-size: 1.2em;
+  }
+
   .product-attributes li span:first-child {
     font-size: 0.8em;
   }
 
   .product-attributes li span:last-child {
     font-size: 0.7em;
-}
+  }
 }

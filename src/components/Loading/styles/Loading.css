@@ -1,7 +1,21 @@
+@keyframes rainbowLoading {
+  0% {
+    color: var(--red);
+  }
+  33% {
+    color: var(--blue);
+  }
+  67% {
+    color: var(--yellow);
+  }
+}
+
 .loading {
+  color: var(--yellow);
   display: flex;
   padding: 30% 0;
   justify-content: center;
-  font-size: 5em;
-  color: rgb(78, 18, 115);
+  font-size: 3em;
+  width: calc(100vw - 274px);
+  animation: rainbowLoading 1s infinite alternate;
 }

@@ -1,40 +1,99 @@
-.home .product-card {
-  border-bottom: 1px solid rgb(233, 233, 233);
+@keyframes toTop {
+  
+  0% {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.product-card {
   display: flex;
-  padding: 40px 20px;
-  width: 700px;
+  flex-direction: column;
+  padding: 20px;
+  width: 230px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  animation: toTop 0.5s;
 }
 
-.home .product-card img {
-  height: 100px;
-  object-fit: cover;
-  width: 100px;
+.remove-action {
+  top: 30px;
+  position: absolute;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  height: 30px;
 }
 
-.home .product-infos {
+.remove-from-the-cart {
+  position: absolute;
+  right: -2px;
+  top: 0px;
+  border: 3px solid var(--primary-color);
+  border-right: none;
+  background-color: #fff;
+  color: var(--red);
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  transition: 0.5s;
+  height: 30px;
+  width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card:hover .remove-from-the-cart {
+  width: 20%;
+}
+
+.remove-from-the-cart:hover {
+  cursor: pointer;
+}
+
+
+.product-card img {
+  height: 150px;
+  object-fit: contain;
+  width: 100%;
+  padding: 20px;
+  border: 3px solid var(--primary-color);
+  background: rgb(255,255,255);
+}
+
+.product-infos {
   color: #444;
   display: grid;
-  padding: 0 30px;
+  padding: 20px 10px;
+  gap: 10px;
   text-decoration: none;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   align-items: center;
+  background-color: var(--primary-color);
 }
 
-.home .product-infos h3 {
+.product-infos h3 {
   font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 500px;
-  font-size: 1.2em;
+  width: 100%;
+  font-size: 0.8em;
 }
 
-.home .product-card .product-price {
-  font-size: 1em;
-  color: rgb(78, 18, 115);
+.product-card .product-price {
+  font-size: 0.8em;
+  color: var(--red);
 }
 
-.home .product-card .free-shipping {
+.product-card .free-shipping {
   color: #44c189;
   display: flex;
   align-items: center;
@@ -42,6 +101,15 @@
   font-weight: 500;
 }
 
-.home .product-card .free-shipping svg {
+.product-card .free-shipping svg {
   margin-right: 5px;
 }
+
+.item-quantity {
+  font-size: 0.8em;
+}
+
+.item-quantity span {
+  color: var(--blue);
+}
+
